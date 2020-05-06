@@ -27,7 +27,7 @@ function mileage(_start, _end) {
     speed += 2        
 
     let count_on_second = toSecond(end) - toSecond(start)    
-    if(count_on_second < 0 || toMinute(count_on_second) < 5) return false    
+    if(count_on_second < 0 || toMinute(count_on_second) < 5) return false     
 
     for(let a = start_after_five_minute; a < count_on_second; a++) {
         if(toMinute(a) % 10 == 0) speed++
