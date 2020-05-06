@@ -30,7 +30,11 @@ function mileage(_start, _end) {
     if(count_on_second < 0 || toMinute(count_on_second) < 5) return false     
 
     for(let a = start_after_five_minute; a < count_on_second; a++) {
-        if(toMinute(a) % 10 == 0) speed++
+        if((toMinute(a)-5) % 10 == 0) {
+            if(toMinute(a) !== 5) {
+                speed++
+            }
+        }
 
         total_distance += speed //counter distance
     }    
