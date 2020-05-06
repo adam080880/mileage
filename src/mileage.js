@@ -26,8 +26,7 @@ function mileage(_start, _end) {
     total_distance += speed*5*60
     speed += 2        
 
-    let count_on_second = toSecond(end) - toSecond(start)
-    console.log(count_on_second)
+    let count_on_second = toSecond(end) - toSecond(start)    
     if(count_on_second < 0) return false    
 
     for(let a = start_after_five_minute; a < count_on_second; a++) {
